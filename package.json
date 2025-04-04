@@ -1,0 +1,55 @@
+{
+  "name": "tl-test-package",
+  "version": "1.0.3",
+  "description": "a test package to understand package publishing and maintenance",
+  "type": "module",
+  "svelte": "./src/index.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "svelte": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [
+    "component",
+    "svelte"
+  ],
+  "peerDependencies": {
+    "svelte": "^4.2.7"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "svelte": "^4.2.7",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThalmisFaraj/tl-package.git"
+  },
+  "author": "thalmis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThalmisFaraj/tl-package/issues"
+  },
+  "homepage": "https://github.com/ThalmisFaraj/tl-package#readme",
+  "dependencies": {
+    "chart.js": "^4.4.8",
+    "chartjs-plugin-datalabels": "^2.2.0"
+  }
+}
