@@ -12,6 +12,7 @@ export default defineConfig(({ command }) => {
       lib: {
         entry: 'src/index.js',
         name: 'TlTestPackage',
+           formats: ['es', 'umd'], 
         fileName: (format) => `index.${format}.js`
       },
       rollupOptions: {
